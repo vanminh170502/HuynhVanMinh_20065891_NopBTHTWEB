@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .wrapper{
+            height: 800px;
+            width: 1089px;
+            background-color: antiquewhite;
+        }
+        *{
+            margin: 0px auto;
+            padding: 0px;
+        }
+        nav{
+            height: 50px;
+            width: 100%;
+            background-color: aqua;
+            line-height: 50px;
+        }
+        header{
+            height: 150px;
+            width: 100%;
+            background-image: url(../img/header.png);
+            text-align: center;
+            text-shadow: 10px 10px 20px;
+            line-height: 150px;
+        }
+        .content{
+            height: 300px;
+            width: 100%;
+            background-color: blanchedalmond;
+        }
+        aside{
+            height:100%;
+            width: 40%;
+            background-color: aquamarine;
+            float: left;
+        }
+        section{
+            height: 100%;
+            width: 60%;
+            background-color: gainsboro;
+            float: right;
+        }
+        .menu li {
+            height: 100%;
+            width: 150px;
+            background-color: aquamarine;
+            float: left;
+            text-indent: 20px;
+            list-style: none;
+            position: relative;
+        }
+        a{
+            font-weight: bold;
+            text-decoration: none;
+            color:  blue;
+        }
+        .menu li:hover{
+            background-color: bisque;
+        }
+        li:hover>a{
+            font-style: italic;
+        }
+        .menu li .submenu{
+            display: none;
+            position: absolute;
+        }
+        .menu li:hover .submenu{
+            display: block;
+        }
+    </style>
+</head>
+<body>
+    <div class="wrapper">
+        <nav>
+            <ul class="menu">
+                <li><a href="https://2h.com.vn">HOME</a></li>
+                <li><a href="">SERVICES</a></li>
+                <li><a href="">CONTACT</a>
+                    <ul class="submenu">
+                        <li><a href="">PHONE</a></li>
+                        <li><a href="">INTERNET</a></li>
+                        <li><a href="">TIVI</a></li>
+                    </ul>
+                </li>
+                <li><a href="">ABOUT</a></li>
+                <li><a href="">HELP</a></li>
+            </ul>
+            <span>
+                <form action="dangky.php" method="post">
+                    <label for="Email">Email: </label>
+                    <input type="email" name="txtEmail" id="txtEmail" required placeholder="nhap Email" style="padding: 3px;">
+                    <input type="submit" value="60" style="border-radius: 50%; box-shadow: 3px 3px 3px red;">
+                </form>
+            </span>
+        </nav>
+        <header>
+            <h1>GAME SHOW</h1>
+        </header>
+        <div class="content">
+            <aside>
+                <article>
+                    <h2>HOAT DONG 1</h2>
+                    <img src="../img/anh1.jpg" alt="Anh1" srcset="">
+                </article>
+                <article>
+                    <h2>HOAT DONG 2</h2>
+                    <img src="../img/anh2.jpg" alt="Anh2" srcset="">
+                </article>
+                <article>
+                    <h2>HOAT DONG 3</h2>
+                    <img src="../img/anh3.jpg" alt="Anh3" srcset="">
+                </article>
+            </aside>
+            <section>
+                <h2 style="text-align: center;">DANG KY THONG MUA XANH</h2>
+                <form action="" method="post">
+                    <label for="lblHoTen">Ho Ten: </label>
+                    <input type="email" name="txtHoTen" id="txtHoTen" required placeholder="Nhap ho ten"> <br> <br>
+                    <label for="lblCMND">So CMND: </label>
+                    <input type="number" name="txtCMND" id="txtCMND" required placeholder="So CMND"> <br> <br>
+                    <label for="Email">Email: </label>
+                    <input type="email" name="txtEmail" id="txtEmail" required placeholder="Nhap Email"> <br> <br>
+                    <label for="lblDK">Ngay dang ky: </label>
+                    <input type="date" name="txtEmail" id="txtNgay" required placeholder="Nhap ngay" pattern="dd/MM/yyyy"> <br> <br>
+                    <input type="submit" value="Dang ky">
+                </form>
+            </section>
+        </div>
+        <footer></footer>
+    </div>
+</body>
+</html>
